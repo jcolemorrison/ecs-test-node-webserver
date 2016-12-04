@@ -9,7 +9,7 @@ describe("Routing", () => {
     it("GET /web returns server", (done) => {
       request(app)
         .get('/web')
-        .expect(200, 'server', done);
+        .expect(200, 'server updated!', done);
     });
   });
 });

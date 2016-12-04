@@ -9,7 +9,7 @@ app.set('port', 5000);
 
 // set up "ping" endpoint
 app.get('/web', function (req, res) {
-  res.send('server')
+  res.send('server updated!')
 });
 
 // catch/handle 404
