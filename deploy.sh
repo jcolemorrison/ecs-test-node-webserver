@@ -29,7 +29,7 @@ function push_to_registry () {
 function update_webserver () {
 
   # update template with newest image build
-  cat ./task-definition.json | $JQ ".containerDefinitions[0].image=$UPDATED_IMAGE" > ./updated_task.json
+  cat ./task-definition.json | $JQ ".containerDefinitions[0].image=\"$UPDATED_IMAGE\"" > ./updated_task.json
   
   # register the updated task with the new image
   aws ecs register-task-definition \
