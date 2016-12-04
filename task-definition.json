@@ -1,0 +1,16 @@
+{
+    "family": "ecs-node-webserver-tasks", 
+    "containerDefinitions": [
+        {
+            "name": "ecs-node-webserver",  
+            "cpu": 102, 
+            "memory": 200, 
+            "portMappings": [
+                {
+                    "containerPort": 5000
+                }
+            ], 
+            "essential": true
+        }
+    ]
+}

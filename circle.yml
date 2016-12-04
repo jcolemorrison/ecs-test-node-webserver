@@ -1,0 +1,17 @@
+machine:
+  services:
+    - docker
+  node:
+    version: 6.9.1
+  environment:
+    PORT: 5000
+
+dependencies:
+  post:
+    - docker build -t $AWS_ACCOUNT_ID.dkr.ecr.$AWS_DEFAULT_REGION.amazonaws.com/ecs-node-webserver-test:$CIRCLE_SHA1 .
+
+deployment:
+  prod:
+    branch: master
+    commands:
+      - ./deploy.sh
