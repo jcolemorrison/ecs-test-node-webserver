@@ -2,7 +2,7 @@ var expect = require("chai").expect;
 var request = require('supertest');
 process.env.NODE_ENV = 'test';
 
-var app = require('./app.js');
+var app = require('../app.js');
 
 describe("Routing", () => {
   describe("web", () => {
