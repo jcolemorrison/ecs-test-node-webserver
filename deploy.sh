@@ -20,7 +20,7 @@ CLUSTER="ecs-webapp-cluster"
 
 function push_to_registry () {
   # login to aws, altough circle CI creds may do this just fine
-  # eval $(aws ecr get-login --region $AWS_DEFAULT_REGION)
+  eval $(aws ecr get-login --region $AWS_DEFAULT_REGION)
 
   # this is already built due to the dependencies circle ci yaml
   docker push $UPDATED_IMAGE
